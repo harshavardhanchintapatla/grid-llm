@@ -1,0 +1,169 @@
+.network-topology {
+  height: calc(100vh - 280px);
+  display: flex;
+  flex-direction: column;
+}
+
+.topology-view {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.topology-node {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  min-width: 160px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.topology-node:hover {
+  transform: scale(1.05);
+}
+
+.topology-node.sdn-controller {
+  border-color: #2196f3;
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+}
+
+.topology-node.attacker {
+  border-color: #f44336;
+  box-shadow: 0 0 20px rgba(244, 67, 54, 0.3);
+}
+
+.topology-node.victim {
+  border-color: #4caf50;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.node-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.node-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.node-ip {
+  font-size: 12px;
+  color: #90a4ae;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 8px;
+}
+
+.node-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.node-status.active {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.node-status.blocked {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.node-status.protected {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.topology-connection {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(180deg, #2196f3 0%, rgba(33, 150, 243, 0.3) 100%);
+}
+
+.topology-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.attack-indicator {
+  margin-top: 20px;
+}
+
+.attack-arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid #f44336;
+  border-radius: 8px;
+}
+
+.attack-arrow span {
+  font-size: 24px;
+}
+
+.arrow-label {
+  color: #f44336;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topology-legend {
+  padding: 20px;
+  border-top: 1px solid rgba(100, 181, 246, 0.2);
+}
+
+.topology-legend h3 {
+  font-size: 14px;
+  color: #64b5f6;
+  margin-bottom: 12px;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+
+.legend-color {
+  width: 20px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-color.active {
+  background: #4caf50;
+}
+
+.legend-color.blocked {
+  background: #f44336;
+}
+
+.legend-color.warning {
+  background: #ff9800;
+}

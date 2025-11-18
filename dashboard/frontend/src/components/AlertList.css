@@ -1,0 +1,148 @@
+.alert-list {
+  height: calc(100vh - 280px);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(100, 181, 246, 0.2);
+}
+
+.panel-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.alert-count {
+  background: #2196f3;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.alert-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.alert-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.alert-items::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.alert-items::-webkit-scrollbar-thumb {
+  background: rgba(100, 181, 246, 0.3);
+  border-radius: 4px;
+}
+
+.alert-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.alert-item:hover {
+  background: rgba(100, 181, 246, 0.1);
+  transform: translateX(4px);
+}
+
+.alert-item.selected {
+  background: rgba(100, 181, 246, 0.15);
+  border-left-color: #64b5f6;
+}
+
+.alert-item.severity-high {
+  border-left-color: #f44336;
+}
+
+.alert-item.severity-medium {
+  border-left-color: #ff9800;
+}
+
+.alert-item.severity-low {
+  border-left-color: #ffc107;
+}
+
+.alert-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.severity-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.severity-badge.high {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.severity-badge.medium {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+  border: 1px solid #ff9800;
+}
+
+.severity-badge.low {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.alert-time {
+  font-size: 12px;
+  color: #90a4ae;
+}
+
+.alert-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alert-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.alert-info .label {
+  color: #90a4ae;
+}
+
+.alert-info .value {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.alert-info .value.code {
+  font-family: 'Courier New', monospace;
+  background: rgba(100, 181, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #64b5f6;
+}
